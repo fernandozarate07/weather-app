@@ -1,2 +1,12 @@
+# Node modules
 node_modules/
+
+# Webpack output
 dist/
+
+# Env files
+.env
+
+# System files
+.DS_Store
+Thumbs.db
