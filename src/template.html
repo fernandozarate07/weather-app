@@ -4,6 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <form class="header__search-form">
+        <input type="text" class="header__input" />
+        <button class="haeder__btn"><i class="fa-solid fa-magnifying-glass header__i"></i></button>
+      </form>
+    </header>
+    <!-- main -->
+    <main class="main">
+      <div class="main__info-container">
+        <div class="main__palce"></div>
+        <div class="main__temperature"></div>
+        <div class="main__status-img"></div>
+        <div class="main__status-text"></div>
+        <div class="main__date-and-time"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__copy">&copy; Fernando Zárate 2024</p>
+    </footer>
+  </body>
 </html>
