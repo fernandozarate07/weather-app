@@ -1,4 +1,4 @@
-import { addObserver, notify, getData, loadPage } from "./model";
+import { addObserver, notify, getData, loadPage, hideLoader } from "./model";
 import { renderMain } from "./vision";
 console.log("Webpack Template Initialized!");
 
@@ -35,6 +35,7 @@ formNewCity.addEventListener("submit", (event) => {
         errorMessage.textContent = "Error, invalid city";
         errorContainer.classList.add("visible");
         console.error("Ciudad no disponible");
+        hideLoader();
       });
   }
 });

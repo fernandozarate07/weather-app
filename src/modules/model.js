@@ -42,4 +42,4 @@ async function loadPage() {
     console.error("Error al inicializar el clima predeterminado:", error);
   }
 }
-export { addObserver, notify, getData, loadPage };
+export { addObserver, notify, getData, loadPage, hideLoader };
