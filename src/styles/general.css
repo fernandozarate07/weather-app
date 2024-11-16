@@ -8,8 +8,8 @@
 :root {
   --white-soft: #f1f1f1;
   --black-soft: #333333;
-  --day-gradient: linear-gradient(to bottom, #fbc531, #f39c12, #e67e22, #2980b9, #3498db, #4e73df);
-  --night-gradient: linear-gradient(to bottom, #1e3a8a, #334e92, #3b6fa6, #0f172a, #020c1b, #020d1f);
+  --day-gradient: linear-gradient(to bottom, #f9d423, #f6ab39, #f37c3a, #50b9d6, #5ccbf3, #9bd7fc);
+  --night-gradient: linear-gradient(to bottom, #1e3a8a, #375899, #4a74ad, #5a8bc2, #6ca3d7, #80bbea);
   --black-transparent: rgba(0, 0, 0, 0.2);
   --semi-transparent-white: rgba(255, 255, 255, 0.7);
 }
