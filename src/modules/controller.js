@@ -2,11 +2,11 @@ import { addObserver, notify, getData, loadPage } from "./model";
 import { renderMain } from "./vision";
 console.log("Webpack Template Initialized!");
 
+// load page
 loadPage();
-
+// add obs
 addObserver(renderMain);
 // load new city
-
 const formNewCity = document.querySelector(".header__search-form");
 formNewCity.addEventListener("submit", (event) => {
   event.preventDefault();
