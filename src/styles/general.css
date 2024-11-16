@@ -13,11 +13,3 @@
   --black-transparent: rgba(0, 0, 0, 0.5);
   --semi-transparent-white: rgba(255, 255, 255, 0.7);
 }
-.body-day {
-  background: var(--day-gradient);
-  color: var(--black-soft);
-}
-.body-night {
-  background: var(--night-gradient);
-  color: var(--white-soft);
-}
