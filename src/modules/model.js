@@ -1,6 +1,7 @@
 const observers = [];
 function addObserver(observer) {
   observers.push(observer);
+  console.log(observers);
 }
 function notify(data) {
   observers.forEach((obs) => {
@@ -9,7 +10,7 @@ function notify(data) {
 }
 async function getData(city) {
   const key = "7GJBTC4HB5EX8LYURPUN3CZEY";
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=${key}`;
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${key}`;
 
   const response = await fetch(url);
   const data = await response.json();
@@ -21,6 +22,7 @@ async function loadPage() {
   try {
     const response = await getData(city);
     console.log(response);
+    notify(response);
   } catch (error) {
     console.error("Error al inicializar el clima predeterminado:", error);
   }

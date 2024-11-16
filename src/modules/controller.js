@@ -1,9 +1,10 @@
 import { addObserver, notify, getData, loadPage } from "./model";
+import { renderMain } from "./vision";
 console.log("Webpack Template Initialized!");
 
 loadPage();
 
-// addObserver()
+addObserver(renderMain);
 // load new city
 
 const formNewCity = document.querySelector(".header__search-form");

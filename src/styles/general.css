@@ -10,6 +10,6 @@
   --black-soft: #333333;
   --day-gradient: linear-gradient(to bottom, #fbc531, #f39c12, #e67e22, #2980b9, #3498db, #4e73df);
   --night-gradient: linear-gradient(to bottom, #1e3a8a, #334e92, #3b6fa6, #0f172a, #020c1b, #020d1f);
-  --black-transparent: rgba(0, 0, 0, 0.5);
+  --black-transparent: rgba(0, 0, 0, 0.2);
   --semi-transparent-white: rgba(255, 255, 255, 0.7);
 }
