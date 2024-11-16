@@ -11,24 +11,18 @@ async function getData(city) {
   const key = "7GJBTC4HB5EX8LYURPUN3CZEY";
   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=${key}`;
 
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error.message);
-  }
-  notify(data);
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
 }
+
 async function loadPage() {
   let city = "buenos aires";
   try {
-    await getData(city);
+    const response = await getData(city);
+    console.log(response);
   } catch (error) {
     console.error("Error al inicializar el clima predeterminado:", error);
   }
 }
-export { addObserver, getData, loadPage };
+export { addObserver, notify, getData, loadPage };

@@ -1,8 +1,9 @@
-import { addObserver, getData, loadPage } from "./model";
+import { addObserver, notify, getData, loadPage } from "./model";
 console.log("Webpack Template Initialized!");
 
 loadPage();
 
+// addObserver()
 // load new city
 
 const formNewCity = document.querySelector(".header__search-form");
@@ -15,13 +16,24 @@ formNewCity.addEventListener("submit", (event) => {
   const errorContainer = document.querySelector(".header__error-container");
 
   if (nameNewCity === "" || !isNaN(nameNewCity)) {
-    console.log("esta funcando el error");
+    console.error("invalid option");
     errorMessage.textContent = "Please choose a valid option";
     errorContainer.classList.add("visible");
   } else {
     errorMessage.textContent = "";
     errorContainer.classList.remove("visible");
     inpNewCity.value = "";
-    getData(nameNewCity);
+
+    // Llamamos a getData con la ciudad
+    getData(nameNewCity)
+      .then((response) => {
+        notify(response);
+        console.log(response);
+      })
+      .catch(() => {
+        errorMessage.textContent = "Error, invalid city";
+        errorContainer.classList.add("visible");
+        console.error("Ciudad no disponible");
+      });
   }
 });
