@@ -5,8 +5,7 @@
   display: grid;
   grid-template-rows: 10vh 1fr 5vh;
 
-  font-family: "Poppins", sans-serif;
-
+  font-family: "Quicksand", sans-serif;
   color: var(--white-soft);
 }
 /* header */
@@ -20,17 +19,8 @@
 
   background-color: var(--black-transparent);
 }
-.header__logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.header__logo-name {
-  margin: 0;
-  font-family: "Knewave", cursive;
+.header__logo {
   font-size: 2rem;
-  letter-spacing: 3px;
 }
 .header__search-form {
   position: relative;
