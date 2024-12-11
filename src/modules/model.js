@@ -1,7 +1,6 @@
 const observers = [];
 function addObserver(observer) {
   observers.push(observer);
-  console.log(observers);
 }
 function notify(data) {
   observers.forEach((obs) => {

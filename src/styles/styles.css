@@ -6,11 +6,8 @@
   grid-template-rows: 10vh 1fr 5vh;
 
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
 
   color: var(--white-soft);
-  background-color: var(--black-soft);
 }
 /* header */
 .header {
@@ -254,11 +251,113 @@
 
 /* dinamicos */
 .body-day {
-  background: var(--day-gradient);
+  background: linear-gradient(
+    45deg,
+    #1f4e7a,
+    #2475a4,
+    #2999c7,
+    #2ec1e9,
+    #4dd8ff,
+    #3bc4e6,
+    #2ba9d2,
+    #2391b7,
+    #1d74a3,
+    #1f4e7a
+  );
+  background-size: 10000% 10000%;
+  animation: day 20s ease-in-out infinite;
 }
+
+@keyframes day {
+  0% {
+    background-position: 0% 82%;
+  }
+  10% {
+    background-position: 10% 75%;
+  }
+  20% {
+    background-position: 20% 68%;
+  }
+  30% {
+    background-position: 30% 60%;
+  }
+  40% {
+    background-position: 40% 55%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  60% {
+    background-position: 60% 45%;
+  }
+  70% {
+    background-position: 70% 40%;
+  }
+  80% {
+    background-position: 80% 35%;
+  }
+  90% {
+    background-position: 90% 28%;
+  }
+  100% {
+    background-position: 100% 19%;
+  }
+}
+
 .body-night {
-  background: var(--night-gradient);
+  background: linear-gradient(
+    45deg,
+    #1d1b26,
+    #2a2a36,
+    #3a3a4a,
+    #4c4c63,
+    #6a6a7f,
+    #4e4e64,
+    #3c3c52,
+    #2a2a40,
+    #202033,
+    #1d1b26
+  );
+  background-size: 10000% 10000%;
+  animation: night 20s ease-in-out infinite;
 }
+
+@keyframes night {
+  0% {
+    background-position: 0% 80%;
+  }
+  10% {
+    background-position: 10% 75%;
+  }
+  20% {
+    background-position: 20% 70%;
+  }
+  30% {
+    background-position: 30% 65%;
+  }
+  40% {
+    background-position: 40% 60%;
+  }
+  50% {
+    background-position: 50% 55%;
+  }
+  60% {
+    background-position: 60% 50%;
+  }
+  70% {
+    background-position: 70% 45%;
+  }
+  80% {
+    background-position: 80% 40%;
+  }
+  90% {
+    background-position: 90% 35%;
+  }
+  100% {
+    background-position: 100% 30%;
+  }
+}
+
 .visible {
   visibility: visible;
   opacity: 1;
