@@ -12,15 +12,14 @@ formNewCity.addEventListener("submit", (event) => {
 
   const inpNewCity = document.querySelector(".header__input");
   const nameNewCity = inpNewCity.value.trim();
-  const errorMessage = document.querySelector(".header__error");
-  const errorContainer = document.querySelector(".header__errorContainer");
+  const errorMessage = document.querySelector(".header__errorSearch");
 
   if (nameNewCity === "" || !isNaN(nameNewCity)) {
     errorMessage.textContent = "Please choose a valid option";
-    errorContainer.classList.add("visible");
+    errorMessage.classList.add("visible");
   } else {
     errorMessage.textContent = "";
-    errorContainer.classList.remove("visible");
+    errorMessage.classList.remove("visible");
     inpNewCity.value = "";
 
     // Llamamos a getData con la ciudad
@@ -30,7 +29,7 @@ formNewCity.addEventListener("submit", (event) => {
       })
       .catch(() => {
         errorMessage.textContent = "Error, invalid city";
-        errorContainer.classList.add("visible");
+        errorMessage.classList.add("visible");
         hideLoader();
       });
   }
