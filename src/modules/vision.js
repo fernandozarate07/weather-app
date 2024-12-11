@@ -1,3 +1,4 @@
+// observador RenderMain
 function renderMain(data) {
   // body aparience
   const body = document.querySelector(".body");

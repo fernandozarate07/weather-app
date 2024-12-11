@@ -1,11 +1,14 @@
 import { addObserver, notify, getData, loadPage, hideLoader } from "./model";
 import { renderMain } from "./vision";
 
-// load page
+// carga la pagina de inicio
 loadPage();
-// add obs
+
+// añade a renderMain como observador
 addObserver(renderMain);
-// load new city
+
+// validacion de los datos del input
+
 const formNewCity = document.querySelector(".header__search");
 formNewCity.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -22,7 +25,7 @@ formNewCity.addEventListener("submit", (event) => {
     errorMessage.classList.remove("visible");
     inpNewCity.value = "";
 
-    // Llamamos a getData con la ciudad
+    // Hace una nueva peticion con los datos previamente validados
     getData(nameNewCity)
       .then((response) => {
         notify(response);
