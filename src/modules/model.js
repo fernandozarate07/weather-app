@@ -9,11 +9,11 @@ function notify(data) {
 }
 // loader
 function showLoader() {
-  document.querySelector(".loader-container").style.display = "flex";
+  document.querySelector(".loaderContainer").style.display = "flex";
 }
 
 function hideLoader() {
-  document.querySelector(".loader-container").style.display = "none";
+  document.querySelector(".loaderContainer").style.display = "none";
 }
 // peticion a Api
 
@@ -35,7 +35,6 @@ async function loadPage() {
   let city = "buenos aires";
   try {
     const response = await getData(city);
-    console.log(response);
     notify(response);
   } catch (error) {
     console.error("Error al inicializar el clima predeterminado:", error);

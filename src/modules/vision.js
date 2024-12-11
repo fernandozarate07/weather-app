@@ -68,7 +68,7 @@ function renderMain(data) {
   const condition = document.querySelector(".main__condition");
   condition.textContent = data.currentConditions.conditions;
   // day date
-  const day = document.querySelector(".main__day-date");
+  const day = document.querySelector(".main__dayDate");
   day.textContent = data.days[0].datetime;
   const descriptions = document.querySelector(".main__descriptions");
   descriptions.textContent = data.description;
