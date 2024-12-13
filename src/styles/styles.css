@@ -306,6 +306,10 @@
   .main {
     padding-inline: 300px;
   }
+  .main__infoContainer {
+    width: 100%;
+    max-width: 1800px;
+  }
   .item {
     background-color: var(--black-transparent);
     padding: 10px;
