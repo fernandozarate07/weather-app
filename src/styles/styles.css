@@ -165,7 +165,7 @@
   align-items: center;
 
   z-index: 10;
-  background-color: var(--black-transparent);
+  background-color: var(--black-soft);
   display: none;
 }
 .loader {
